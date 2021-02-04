@@ -1,0 +1,11 @@
+commit d80417d4f5e403af93af06e77477e0591f29a83a
+Author: Aleksey <aleksey.nalivajko1995@gmail.com>
+Date:   Thu Feb 4 16:03:17 2021 +0300
+
+    add status
+
+commit 35db4c075e3fd0a6419e24a9a9e9253a20ef386b
+Author: Aleksey <aleksey.nalivajko1995@gmail.com>
+Date:   Thu Feb 4 16:01:05 2021 +0300
+
+    add .gitignore
