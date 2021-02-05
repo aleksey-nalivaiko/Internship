@@ -3,11 +3,7 @@ version: "3.7"
 services:
   web:
     image: alekseynalivaiko/internship:latest
-<<<<<<< HEAD
-	  container_name: web
-=======
 	container_name: web
->>>>>>> eea6a361a1d4c3227a45cbab37bb894240941aa6
     expose:
       - "8081"
     ports:
@@ -27,13 +23,7 @@ services:
   db:
     image: postgres:latest
     container_name: db
-<<<<<<< HEAD
-	  ports:
-	  - "5432:5432"
-	  env_file:
-=======
 	ports:
 	  - "5432:5432"
 	env_file:
->>>>>>> eea6a361a1d4c3227a45cbab37bb894240941aa6
       - ./database.env
