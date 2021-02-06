@@ -1,13 +1,12 @@
-# Dockefile to build Docker image of Apache WebServer running on Ubuntu
+# Dockefile to build Docker image of Nginx running on Ubuntu
+FROM ubuntu:20.04
 
-FROM ubuntu:16.04
-
-ENV DEVOPS="Aleksey"
+ENV DEVOPS="Aleksey Nalivaiko"
 
 RUN apt-get -y update \
-    && apt-get -y install apache2 \
-    && echo ' $DEVOPS Exadel Sandbox 2021' > /var/www/html/index.html
-
-# Run Apache WebServer
-CMD ["/usr/sbin/apache2ctl", "-D","FOREGROUND"]
+    && apt-get install -y nginx \
+    && echo ' $DEVOPS Exadel Sandbox 2021' > /var/www/html/index.nginx-debian.html
+	
+# Run nginx 
+CMD ["nginx", "-g", "daemon off;"]
 EXPOSE 80
