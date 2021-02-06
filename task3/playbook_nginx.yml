@@ -1,0 +1,19 @@
+---
+- name: Test Connection to servers
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Ping servers
+      ping:
+
+- name : Install Nginx
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Install Nginx
+      apt: name=nginx state=latest
+
+    - name: Start Nginx and Enable
+      service: name=nginx state=started enabled=yes
