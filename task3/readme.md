@@ -1,6 +1,4 @@
-#### [task3](https://github.com/aleksey-nalivaiko/Internship/tree/master/task3) - Ansible playbook
-- Create Ansible playbook for install Nginx and start it
-
+#### [Link](https://github.com/aleksey-nalivaiko/Internship/tree/master/task3) - Create Ansible playbook for install Nginx and start it
 OS: Ubuntu
 
 Use to run the playbook:
