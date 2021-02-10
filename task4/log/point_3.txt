@@ -1,0 +1,84 @@
+SSHLauncher{host='192.168.4.62', port=22, credentialsId='41ddfead-9a4f-471c-8320-a0c45c86c3b2', jvmOptions='', javaPath='', prefixStartSlaveCmd='', suffixStartSlaveCmd='', launchTimeoutSeconds=60, maxNumRetries=10, retryWaitTime=15, sshHostKeyVerificationStrategy=hudson.plugins.sshslaves.verifiers.ManuallyTrustedKeyVerificationStrategy, tcpNoDelay=true, trackCredentials=true}
+[02/10/21 06:48:49] [SSH] Opening SSH connection to 192.168.4.62:22.
+[02/10/21 06:48:49] [SSH] SSH host key matches key seen previously for this host. Connection will be allowed.
+[02/10/21 06:48:49] [SSH] Authentication successful.
+[02/10/21 06:48:50] [SSH] The remote user's environment is:
+BASH=/usr/bin/bash
+BASHOPTS=checkwinsize:cmdhist:complete_fullquote:extquote:force_fignore:globasciiranges:hostcomplete:interactive_comments:progcomp:promptvars:sourcepath
+BASH_ALIASES=()
+BASH_ARGC=([0]="0")
+BASH_ARGV=()
+BASH_CMDS=()
+BASH_EXECUTION_STRING=set
+BASH_LINENO=()
+BASH_SOURCE=()
+BASH_VERSINFO=([0]="5" [1]="0" [2]="17" [3]="1" [4]="release" [5]="x86_64-pc-linux-gnu")
+BASH_VERSION='5.0.17(1)-release'
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/0/bus
+DIRSTACK=()
+EUID=0
+GROUPS=()
+HOME=/root
+HOSTNAME=alex2-virtual-machine
+HOSTTYPE=x86_64
+IFS=$' \t\n'
+LANG=en_US.UTF-8
+LC_ADDRESS=be_BY.UTF-8
+LC_IDENTIFICATION=be_BY.UTF-8
+LC_MEASUREMENT=be_BY.UTF-8
+LC_MONETARY=be_BY.UTF-8
+LC_NAME=be_BY.UTF-8
+LC_NUMERIC=be_BY.UTF-8
+LC_PAPER=be_BY.UTF-8
+LC_TELEPHONE=be_BY.UTF-8
+LC_TIME=be_BY.UTF-8
+LOGNAME=root
+MACHTYPE=x86_64-pc-linux-gnu
+MOTD_SHOWN=pam
+OPTERR=1
+OPTIND=1
+OSTYPE=linux-gnu
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PIPESTATUS=([0]="0")
+PPID=101873
+PS4='+ '
+PWD=/root
+SHELL=/bin/bash
+SHELLOPTS=braceexpand:hashall:interactive-comments
+SHLVL=1
+SSH_CLIENT='192.168.4.63 50924 22'
+SSH_CONNECTION='192.168.4.63 50924 192.168.4.62 22'
+TERM=dumb
+UID=0
+USER=root
+XDG_RUNTIME_DIR=/run/user/0
+XDG_SESSION_CLASS=user
+XDG_SESSION_ID=294
+XDG_SESSION_TYPE=tty
+_=']'
+[02/10/21 06:48:50] [SSH] Checking java version of /home/alex2/jdk/bin/java
+Couldn't figure out the Java version of /home/alex2/jdk/bin/java
+bash: /home/alex2/jdk/bin/java: No such file or directory
+
+[02/10/21 06:48:50] [SSH] Checking java version of java
+[02/10/21 06:48:50] [SSH] java -version returned 11.0.10.
+[02/10/21 06:48:50] [SSH] Starting sftp client.
+[02/10/21 06:48:50] [SSH] Copying latest remoting.jar...
+Source agent hash is D866F0B482DB94F38E49B26B465D5DB5. Installed agent hash is D866F0B482DB94F38E49B26B465D5DB5
+Verified agent jar. No update is necessary.
+Expanded the channel window size to 4MB
+[02/10/21 06:48:50] [SSH] Starting agent process: cd "/home/alex2" && java  -jar remoting.jar -workDir /home/alex2 -jar-cache /home/alex2/remoting/jarCache
+Feb 10, 2021 9:48:50 AM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+INFO: Using /home/alex2/remoting as a remoting work directory
+Feb 10, 2021 9:48:50 AM org.jenkinsci.remoting.engine.WorkDirManager setupLogging
+INFO: Both error and output logs will be printed to /home/alex2/remoting
+<===[JENKINS REMOTING CAPACITY]===>channel started
+Remoting version: 4.5
+This is a Unix agent
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by jenkins.slaves.StandardOutputSwapper$ChannelSwapper to constructor java.io.FileDescriptor(int)
+WARNING: Please consider reporting this to the maintainers of jenkins.slaves.StandardOutputSwapper$ChannelSwapper
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+Evacuated stdout
+Agent successfully connected and online

@@ -1,0 +1,10 @@
+node {
+        stage('task4 point7')
+        {
+		withCredentials([
+            usernamePassword(credentialsId: 'task4', passwordVariable: 'password', usernameVariable: 'username')]) {
+            sh 'echo username is $username'
+            sh 'echo pasword is $password'
+            }
+    }
+}

@@ -1,0 +1,19 @@
+Started by user Aleksey Nalivaiko
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/Pipeline-Date
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (my-pipeline)
+[Pipeline] echo
+Date:
+[Pipeline] sh
++ date
+Wed Feb 10 07:22:31 UTC 2021
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

@@ -1,0 +1,25 @@
+Started by user Aleksey Nalivaiko
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/test2
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (task4 point7)
+[Pipeline] withCredentials
+Masking supported pattern matches of $username or $password
+[Pipeline] {
+[Pipeline] sh
++ echo username is ****
+username is ****
+[Pipeline] sh
++ echo pasword is ****
+pasword is ****
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

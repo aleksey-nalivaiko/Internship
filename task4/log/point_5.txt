@@ -1,0 +1,22 @@
+Started by user Aleksey Nalivaiko
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/Pipeline-DockerImages
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Status_DOcker_Images)
+[Pipeline] echo
+Docker Images:
+[Pipeline] sh
++ docker ps -a
+CONTAINER ID        IMAGE                            COMMAND                  CREATED             STATUS                  PORTS                                              NAMES
+642d332320be        jenkins_with_docker              "/sbin/tini -- /usr/…"   18 hours ago        Up 18 hours             0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   jenkins
+2de2b012816d        jenkins/jenkins:lts              "/sbin/tini -- /usr/…"   3 days ago          Exited (1) 3 days ago                                                      app
+b304d3688600        alekseynalivaiko/web-server:v1   "nginx -g 'daemon of…"   3 days ago          Exited (0) 3 days ago                                                      task2_web_1
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

@@ -1,0 +1,16 @@
+node{
+
+  git branch: "master", url: "https://github.com/aleksey-nalivaiko/Internship.git" 
+  
+  stage ('Build Images') {
+    sh "docker build -t alekseynalivaiko/ubuntu_task4:v1 ."
+  }
+  
+  stage ('Run docker images'){
+    sh "docker run -d alekseynalivaiko/ubuntu_task4:v1"
+  }
+  
+  stage ('List of Docker Images'){
+    sh "docker ps -a"
+  }
+}

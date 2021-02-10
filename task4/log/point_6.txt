@@ -1,0 +1,72 @@
+Started by user Aleksey Nalivaiko
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/Pipeline-Docker_GItHub
+[Pipeline] {
+[Pipeline] git
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/aleksey-nalivaiko/Internship.git # timeout=10
+Fetching upstream changes from https://github.com/aleksey-nalivaiko/Internship.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.11.0'
+ > git fetch --tags --progress -- https://github.com/aleksey-nalivaiko/Internship.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 369897c6de5dd1d1baa1e0994907aae99faeb097 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 369897c6de5dd1d1baa1e0994907aae99faeb097 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D master # timeout=10
+ > git checkout -b master 369897c6de5dd1d1baa1e0994907aae99faeb097 # timeout=10
+Commit message: "add Jenkinsfile"
+ > git rev-list --no-walk 369897c6de5dd1d1baa1e0994907aae99faeb097 # timeout=10
+[Pipeline] stage
+[Pipeline] { (Build Images)
+[Pipeline] sh
++ docker build -t alekseynalivaiko/ubuntu_task4:v1 .
+Sending build context to Docker daemon  203.8kB
+
+Step 1/5 : FROM ubuntu:20.04
+ ---> f63181f19b2f
+Step 2/5 : ENV DEVOPS="Aleksey Nalivaiko"
+ ---> Using cache
+ ---> efd98560d698
+Step 3/5 : RUN apt-get -y update     && apt-get install -y nginx     && echo ' $DEVOPS Exadel Sandbox 2021' > /var/www/html/index.nginx-debian.html
+ ---> Using cache
+ ---> 16618b9b9139
+Step 4/5 : CMD ["nginx", "-g", "daemon off;"]
+ ---> Using cache
+ ---> ef8f99034e44
+Step 5/5 : EXPOSE 80
+ ---> Using cache
+ ---> d765677aeeb9
+Successfully built d765677aeeb9
+Successfully tagged alekseynalivaiko/ubuntu_task4:v1
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Run docker images)
+[Pipeline] sh
++ docker run -d alekseynalivaiko/ubuntu_task4:v1
+519e896a66ad86384563ed08bbc2cae40b6af9a27d82da0c553a249ebb02592e
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (List of Docker Images)
+[Pipeline] sh
++ docker ps -a
+CONTAINER ID        IMAGE                              COMMAND                  CREATED             STATUS                  PORTS                                              NAMES
+519e896a66ad        alekseynalivaiko/ubuntu_task4:v1   "nginx -g 'daemon of…"   1 second ago        Up Less than a second   80/tcp                                             thirsty_taussig
+642d332320be        jenkins_with_docker                "/sbin/tini -- /usr/…"   20 hours ago        Up 20 hours             0.0.0.0:8080->8080/tcp, 0.0.0.0:50000->50000/tcp   jenkins
+2de2b012816d        jenkins/jenkins:lts                "/sbin/tini -- /usr/…"   4 days ago          Exited (1) 4 days ago                                                      app
+b304d3688600        alekseynalivaiko/web-server:v1     "nginx -g 'daemon of…"   4 days ago          Exited (0) 4 days ago                                                      task2_web_1
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
