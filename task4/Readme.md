@@ -19,3 +19,4 @@ Use to run the command:
 #### Point_5. Create a Pipeline that will execute the docker ps -a command on the host
 #### Point_6. Create a Pipeline that will download the code from your repository and build the docker image from your Dockerfile (which you wrote when you met with docker)
 #### Point_7. Pass the variable PASSWORD = QWERTY! Encrypted to docker container
+#### Point_8. Pipeline which will run a docker container from your dockerfile on an additional virtual machine

@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+        stage("Link to Git Hub") {
+            steps {
+                git branch: 'master', credentialsId: 'alex-sshkey-github', url: 'git@github.com:aleksey-nalivaiko/Internship.git'
+            }
+        }
+        stage("Build Image and run") {
+            steps {
+                sh "docker build -t task4_jenkins:v1 ."
+                sh "docker run -d task4_jenkins:v1"
+                sh "docker ps -a"
+            }
+        }
+    }
+}
