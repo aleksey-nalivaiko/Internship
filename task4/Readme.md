@@ -1,6 +1,10 @@
 #### [Link](https://github.com/aleksey-nalivaiko/Internship/tree/master/task4) - Jenkins
 
 #### Point_1. Install Jenkins (you need to use Jenkins in Docker)
+
+Use to build:
+`docker build -t jenkins_with_docker`
+
 Use to run the command:
 
 ` docker run -d --name jenkins --restart='always' \ `
