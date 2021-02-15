@@ -1,0 +1,4 @@
+select * from Result 
+join Exadel.Students 
+on Exadel.Result.StudentId = Exadel.Students.Id 
+where Exadel.Students.LastName = 'Наливайко';

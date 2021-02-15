@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+  db:
+    image: mysql
+    container_name: "mysql_latest"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_USER: alex
+      MYSQL_PASSWORD: alexps
+    ports:
+      - "3306:3306"
+    volumes:
+      - /opt/mysql/mysql_db:/var/lib/mysql
+      - ./mysql-dump/build.sql:/docker-entrypoint-initdb.d/build.sql

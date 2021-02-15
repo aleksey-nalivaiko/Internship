@@ -1,0 +1,27 @@
+version: '3.5'
+services:
+  db_master:
+    image: mysql
+    container_name: "master"
+    hostname: master
+    environment:
+      MYSQL_ROOT_PASSWORD: mypass
+    ports:
+      - "3306:3306"
+    volumes:
+      - $PWD/d0:/var/lib/mysql
+      - ./cnf/mastercnf.cnf:/etc/my.cnf   
+
+  db_slave:
+    image: mysql
+    container_name: "slave"
+    hostname: slave
+    environment:
+      MYSQL_ROOT_PASSWORD: mypass
+    volumes:
+      - $PWD/d1:/var/lib/mysql
+      - ./cnf/slavecnf.cnf:/etc/my.cnf
+
+networks: 
+  sql_networks:
+  driver: bridge

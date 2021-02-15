@@ -1,0 +1,37 @@
+version: '3.5'
+services:
+  master:
+    hostname: master
+    container_name: master
+    image: mongo
+    ports:
+      - 27017:27017
+    restart: unless-stopped
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0" ]
+    volumes:
+      - ./db-data/data/db
+
+  slave:
+    hostname: slave
+    container_name: slave
+    image: mongo
+    ports:
+      - 27018:27017
+    restart: unless-stopped
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0" ]
+    volumes:
+      - ./db-data2:/data/db
+      
+  arbiter:
+    hostname: arbiter
+    container_name: arbiter
+    image: mongo
+    ports:
+      - 27019:27017
+    restart: unless-stopped
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "rs0" ]
+    volumes:
+      - ./db-data3:/data/db
+networks:
+  mongodb_networks:
+  driver: bridge
