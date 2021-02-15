@@ -24,6 +24,7 @@ rs.initiate(
     ]
   }
 )
+```
 
 ## 4. Create table and check on slave
 ```
@@ -31,6 +32,7 @@ use Exadel
 
 db.createCollection("Students")
 ```
+
 Output on master:
 ```console
 rs0:PRIMARY> show dbs
