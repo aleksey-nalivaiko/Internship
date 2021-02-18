@@ -20,7 +20,7 @@ sudo apt-get install elasticsearch -y
 sudo vim /etc/elasticsearch/elasticsearch.yml
 
 network.host: your_host_ip 
-http.port: 9200  /etc/elasticsearch/elasticsearch.yml
+http.port: 9200  
 discovery.type: single-node
 
 sudo tee -a /etc/elasticsearch/elasticsearch.yml
